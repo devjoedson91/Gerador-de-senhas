@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Image} from 'react-native';
 
 class App extends Component {
 
@@ -8,16 +8,43 @@ class App extends Component {
         const styles = StyleSheet.create({
           container: {
             flex: 1,
-            backgroundColor: '#fff',
+            backgroundColor: '#181818',
             alignItems: 'center',
             justifyContent: 'center',
+                        
           },
+
+          logo: {
+
+            marginBottom: 24,
+            maxWidth: 300,
+            resizeMode: 'contain'
+
+          },
+
+          text: {
+
+            color: '#fff'
+
+          }
+
+
         });
+
+        let uri = './assets/logo.png';
 
         return (
 
           <View style={styles.container}>
-            <Text style={{color: 'red'}}>Open up App.js to start working on your app!</Text>
+
+              <Image 
+                  source={require(uri)}
+                  style={styles.logo}
+              />
+
+              <Text style={styles.text}>Tamanho Caracteres</Text>
+
+
           </View>
 
         )
