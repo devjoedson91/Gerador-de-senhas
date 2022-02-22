@@ -6,7 +6,7 @@ export default StyleSheet.create({
         flex: 1,
         backgroundColor: '#181818',
         justifyContent: 'center',
-        borderColor: '#fff'
+        alignItems: 'center'
                     
     },
 
@@ -14,7 +14,7 @@ export default StyleSheet.create({
 
         maxWidth: 300,
         resizeMode: 'contain',
-        marginLeft: 50
+        
 
       },
 
@@ -28,8 +28,35 @@ export default StyleSheet.create({
 
       slider: {
         
-        marginTop: 30
+        marginTop: 30,
+        
 
+      },
+
+      buttonCta: {
+
+          backgroundColor: '#3eb72b',
+          width: 230,
+          height: 50,
+          borderRadius: 25,
+          marginTop: 30,
+          
+      },
+
+      btnArea: {
+
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+
+      },
+
+      btnText: {
+
+        fontSize: 18,
+        fontWeight: 'bold',
+        color: '#fff'
       }
 
 });

@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import React, {Component} from 'react';
-import { View, Text, SafeAreaView, Image} from 'react-native';
+import { View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
 import Styles from './src/Styles';
 import Slider from '@react-native-community/slider';
 
@@ -12,7 +12,7 @@ class App extends Component {
 
         this.state = {
 
-            value: 0
+            value: 10
         }
 
     }
@@ -40,7 +40,17 @@ class App extends Component {
                         onValueChange={(selectedValue) => this.setState({value: selectedValue})}
                         value={this.state.value}
                         
-                    />               
+                    />
+
+                <TouchableOpacity
+                    style={Styles.buttonCta}                
+                >
+
+                    <View style={Styles.btnArea}>
+                      <Text style={Styles.btnText}>Gerar Senha</Text>
+                    </View>
+                    
+                </TouchableOpacity>               
 
             </SafeAreaView>
 
