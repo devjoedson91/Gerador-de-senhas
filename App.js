@@ -1,56 +1,36 @@
+import 'react-native-gesture-handler';
 import React, {Component} from 'react';
-import { StyleSheet, Text, View, Image} from 'react-native';
+import { Text, SafeAreaView, Image} from 'react-native';
+import Styles from './styles/styles.js';
+import InputRange from './src/Components/inputRangeIndex.js';
 
-class App extends Component {
-
-    render() {
-
-        const styles = StyleSheet.create({
-          container: {
-            flex: 1,
-            backgroundColor: '#181818',
-            alignItems: 'center',
-            justifyContent: 'center',
-                        
-          },
-
-          logo: {
-
-            marginBottom: 24,
-            maxWidth: 300,
-            resizeMode: 'contain'
-
-          },
-
-          text: {
-
-            color: '#fff'
-
-          }
-
-
-        });
+const App = function () {
 
         let uri = './assets/logo.png';
 
         return (
 
-          <View style={styles.container}>
+            <SafeAreaView style={Styles.container}>
 
-              <Image 
-                  source={require(uri)}
-                  style={styles.logo}
-              />
+                <Image 
+                    source={require(uri)}
+                    style={Styles.logo}
+                />
 
-              <Text style={styles.text}>Tamanho Caracteres</Text>
+                <Text style={Styles.text}>Tamanho Caracteres</Text>
 
+                <InputRange 
+                  
+                    minValue={5}
+                    maxValue={20}
+                    onChangeMin = {(v) => console.log(v)} 
+                    onChangeMax = {(v) => console.log(v)}
+               
+                />
 
-          </View>
+            </SafeAreaView>
 
-        )
-
-    }
-
+        );
 
 }
 
