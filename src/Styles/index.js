@@ -6,7 +6,7 @@ export default StyleSheet.create({
         flex: 1,
         backgroundColor: '#181818',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignContent: 'center'
                     
     },
 
@@ -14,49 +14,49 @@ export default StyleSheet.create({
 
         maxWidth: 300,
         resizeMode: 'contain',
+        marginLeft: 50
+
+    },
+
+    text: {
+       marginTop: 30,
+       color: '#fff',
+       fontSize: 18,
+       textAlign: 'center'
+
+    },
+
+    slider: {
+        
+      marginTop: 30,
         
 
-      },
+    },
 
-      text: {
-        marginTop: 30,
-        color: '#fff',
-        fontSize: 18,
-        textAlign: 'center'
+    buttonCta: {
 
-      },
-
-      slider: {
-        
-        marginTop: 30,
-        
-
-      },
-
-      buttonCta: {
-
-          backgroundColor: '#3eb72b',
-          width: 230,
-          height: 50,
-          borderRadius: 25,
-          marginTop: 30,
+      backgroundColor: '#3eb72b',
+      width: 230,
+      height: 50,
+      borderRadius: 25,
+      marginTop: 30,
+      marginLeft: 80
           
-      },
+    },
 
-      btnArea: {
+    btnArea: {
 
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center'
+      flex: 1,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
 
-      },
+    btnText: {
 
-      btnText: {
-
-        fontSize: 18,
-        fontWeight: 'bold',
-        color: '#fff'
-      }
+      fontSize: 18,
+      fontWeight: 'bold',
+      color: '#fff'
+    }
 
 });
