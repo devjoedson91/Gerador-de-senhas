@@ -1,10 +1,23 @@
 import 'react-native-gesture-handler';
 import React, {Component} from 'react';
-import { Text, SafeAreaView, Image} from 'react-native';
-import Styles from './styles/styles.js';
-import InputRange from './src/Components/inputRangeIndex.js';
+import { View, Text, SafeAreaView, Image} from 'react-native';
+import Styles from './src/Styles';
+import Slider from '@react-native-community/slider';
 
-const App = function () {
+class App extends Component {
+
+    constructor(props) {
+
+        super(props);
+
+        this.state = {
+
+            value: 0
+        }
+
+    }
+
+    render() {
 
         let uri = './assets/logo.png';
 
@@ -17,20 +30,23 @@ const App = function () {
                     style={Styles.logo}
                 />
 
-                <Text style={Styles.text}>Tamanho Caracteres</Text>
+                <Text style={Styles.text}>Tamanho:  {this.state.value.toFixed(0)}   Caracteres</Text>
 
-                <InputRange 
-                  
-                    minValue={5}
-                    maxValue={20}
-                    onChangeMin = {(v) => console.log(v)} 
-                    onChangeMax = {(v) => console.log(v)}
-               
-                />
+                    <Slider 
+                        style={Styles.slider}
+                        minimumValue={0}
+                        maximumValue={20}
+                        minimumTrackTintColor='#fff'
+                        onValueChange={(selectedValue) => this.setState({value: selectedValue})}
+                        value={this.state.value}
+                        
+                    />               
 
             </SafeAreaView>
 
         );
+
+    }
 
 }
 

@@ -5,23 +5,30 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#181818',
-        alignItems: 'center',
         justifyContent: 'center',
+        borderColor: '#fff'
                     
     },
 
     logo: {
 
-        marginBottom: 24,
         maxWidth: 300,
-        resizeMode: 'contain'
+        resizeMode: 'contain',
+        marginLeft: 50
 
       },
 
       text: {
-
+        marginTop: 30,
         color: '#fff',
-        fontSize: 20
+        fontSize: 18,
+        textAlign: 'center'
+
+      },
+
+      slider: {
+        
+        marginTop: 30
 
       }
 
