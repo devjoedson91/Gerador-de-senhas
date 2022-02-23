@@ -19,7 +19,7 @@ export default StyleSheet.create({
     },
 
     text: {
-       marginTop: 30,
+       marginTop: 40,
        color: '#fff',
        fontSize: 18,
        textAlign: 'center'
@@ -28,7 +28,7 @@ export default StyleSheet.create({
 
     slider: {
         
-      marginTop: 30,
+      marginTop: 40,
         
 
     },
@@ -39,7 +39,7 @@ export default StyleSheet.create({
       width: 230,
       height: 50,
       borderRadius: 25,
-      marginTop: 30,
+      marginTop: 40,
       marginLeft: 80
           
     },
@@ -47,7 +47,7 @@ export default StyleSheet.create({
     btnArea: {
 
       flex: 1,
-      flexDirection: 'row',
+      flexDirection: 'column',
       justifyContent: 'center',
       alignItems: 'center'
     },
@@ -57,6 +57,17 @@ export default StyleSheet.create({
       fontSize: 18,
       fontWeight: 'bold',
       color: '#fff'
+    },
+
+    containerPassword: {
+
+      maxWidth: 480,
+      height: 90,
+      borderRadius: 4,
+      backgroundColor: 'rgba(0, 0, 0, 0.4)',
+      marginTop: 40
+
+      
     }
 
 });
