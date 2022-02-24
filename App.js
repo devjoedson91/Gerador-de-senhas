@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
-import { View, Text, SafeAreaView, Image, TouchableOpacity} from 'react-native';
+import { View, Text, SafeAreaView, Image, TouchableOpacity, Clipboard} from 'react-native';
 import Styles from './src/Styles';
 import Slider from '@react-native-community/slider';
-import CopyToClipboard from 'react-copy-to-clipboard';
 
 class App extends Component {
 
@@ -14,7 +13,7 @@ class App extends Component {
 
             value: 10,
             password: '',
-            copied: false
+           
         }
 
         this.getPassword = this.getPassword.bind(this);
@@ -23,7 +22,7 @@ class App extends Component {
 
     getPassword() {
 
-        let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ01234567891@#$%&';
+        let charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%&';
         let pass = '';
 
         for (let i = 0, n = charset.length; i < this.state.value; i++) {
@@ -36,9 +35,11 @@ class App extends Component {
             password: pass
         });
 
+        
+
     }
 
-    render() {
+   render() {
 
         let uri = './assets/logo.png';
 
@@ -73,12 +74,15 @@ class App extends Component {
 
                 {this.state.password.length > 0 && (
 
-                    <CopyToClipboard text={this.state.password} onCopy={() => this.setState({copied: true})}>
-
-                        <TouchableOpacity 
+                    <TouchableOpacity 
                             style={Styles.containerPassword}
-                            onPress={() => (this.state.copied) ? alert('Copiado') : null}
-                        >
+                            onPress={() => {
+                                
+                                    Clipboard.setString(this.state.password)
+                                    alert('Senha copiada com sucesso!');
+                            
+                                }
+                            }>
 
                             <View style={Styles.btnArea}>
                                 <Text style={Styles.btnText}>Sua senha gerada foi: </Text>
@@ -86,8 +90,7 @@ class App extends Component {
                                 <Text style={Styles.btnText}>Clique aqui para copiar a senha</Text>
                             </View>
                                     
-                        </TouchableOpacity>
-                    </CopyToClipboard>
+                    </TouchableOpacity>
 
                 )}
 
