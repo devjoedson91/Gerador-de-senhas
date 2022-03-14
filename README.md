@@ -11,7 +11,7 @@ A aplicação consiste em determinar o tamanho da senha que vai de 1 até 20 car
 # Tecnologias utilizadas
 ## Front end
 - React Native
-- Expo
+- Expo-cli
 
 # Como executar o projeto
 
